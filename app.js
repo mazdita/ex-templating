@@ -1,14 +1,24 @@
 const path = require('path');
 const express = require('express');
-const hbs = require('hbs');
-const logger = require('morgan')
+const logger = require('morgan');
 
 // Create app server
 const app = express();
 
 // Configure hbs as view engine
-app.set('view', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+require('./config/hbs.config');
+
+// Configure global template vars
+app.use((req, res, next) => {
+  res.locals.path = req.path;
+  next();
+});
+// Configure router
+const router = require('./config/routes.config');
+app.use('/', router);
+
 
 app.use(logger('dev'));
 
