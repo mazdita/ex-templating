@@ -10,6 +10,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 require('./config/hbs.config');
 
+// Configure body parser
+app.use(express.urlencoded({ extended: true }));
+
 // Configure global template vars
 app.use((req, res, next) => {
   res.locals.path = req.path;
