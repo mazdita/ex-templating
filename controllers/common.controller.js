@@ -1,4 +1,4 @@
 
 module.exports.home = (req, res, next) => {
-  res.render('common/home');
+  // Iteration 1: render home view
 }

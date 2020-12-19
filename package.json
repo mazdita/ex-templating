@@ -4,8 +4,7 @@
   "description": "example of hbs templating with express",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "DEBUG=ex-templating:* nodemon -e hbs,js,css app.js"
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",
