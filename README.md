@@ -49,7 +49,7 @@
 
 ## Iteración 5
 
-- Crear un buscador formulario de crear tweet en la vista de `tweets`
+- Crear un formulario de crear tweet en la vista de `tweets`
 - El controlador de `create` tweets tendrá que leer el body de la petición, validar que los campos son correctos y añadir el nuevo tweet al array, si hay algún error deberá mostrarlo en el formulario.
 - NO IMPORTA QUE NO SE VEA EL LISTADO DE TWEETS AL PINTAR LOS ERRORES (ya trabajaremos esto más adelante)
 
